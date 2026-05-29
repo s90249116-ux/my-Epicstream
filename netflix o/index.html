@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EpicStream Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- BACKGROUND VIDEO -->
+<video autoplay muted loop class="bg-video">
+  <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+</video>
+
+<!-- ================= LOGIN / SIGNUP ================= -->
+<div id="authBox" class="auth-box">
+
+  <h2 id="formTitle">EpicStream Login</h2>
+
+  <input type="text" id="username" placeholder="Username">
+
+  <input type="password" id="password" placeholder="Password">
+
+  <button onclick="handleAuth()" id="authBtn">
+    Login
+  </button>
+  
+  
+  <p id="toggleText" onclick="toggleForm()">
+    Don't have account? Signup
+  </p>
+
+</div>
+
+<!-- ================= MAIN APP ================= -->
+<div id="app" class="hidden">
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+  <img src="logo.png" class="logo">
+
+  <input type="text" id="search" placeholder="Search YouTube videos...">
+
+  <button class="signin-btn" onclick="logout()">
+    Logout
+  </button>
+
+</nav>
+
+<!-- PROFILE -->
+<div class="profile-box">
+
+  <input type="file" id="dpUpload">
+
+  <img id="dp"
+  src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+
+</div>
+
+<!-- FILTER BUTTONS -->
+<div class="filters">
+
+  <button onclick="filterVideos('trending')">
+    Trending
+  </button>
+
+  <button onclick="filterVideos('anime')">
+    Anime
+  </button>
+
+  <button onclick="filterVideos('movies')">
+    Movies
+  </button>
+
+  <button onclick="filterVideos('sports')">
+    Sports
+  </button>
+
+  <button onclick="filterVideos('korean drama')">
+    Korean
+  </button>
+
+</div>
+
+<!-- VIDEOS -->
+<section class="movies">
+
+  <h2>🔥 EpicStream Videos</h2>
+
+  <div id="videoContainer"></div>
+
+</section>
+
+<!-- MY LIST -->
+<section class="movies">
+
+  <h2>❤️ My List</h2>
+
+  <div id="myList"></div>
+
+</section>
+
+<!-- ADMIN PANEL -->
+<section class="admin">
+
+  <h2>🛠 Admin Panel</h2>
+
+  <input type="text" id="adminTitle" placeholder="Video Title">
+
+  <input type="text" id="adminImg" placeholder="Image URL">
+
+  <input type="text" id="adminVideo" placeholder="YouTube Video ID">
+
+ 
+
+  <button onclick="addVideo()">
+    Add Video you want
+  </button>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>EpicStream Pro © 2026</p>
+</footer>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
